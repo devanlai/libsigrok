@@ -575,6 +575,9 @@ struct sr_resource {
 enum sr_output_flag {
 	/** If set, this output module writes the output itself. */
 	SR_OUTPUT_INTERNAL_IO_HANDLING = 0x01,
+	/** If set, this output module expects newline translation on
+	 platforms where it is necessary (i.e. Windows). */
+	SR_OUTPUT_NEWLINE_TRANSLATION  = 0x02,
 };
 
 struct sr_input;
